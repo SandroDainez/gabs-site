@@ -263,3 +263,9 @@ footer {
 }
 
 
+@media (max-width: 768px) {
+  * {
+    outline: 1px solid red;
+  }
+}
+
