@@ -215,3 +215,46 @@ footer {
   box-shadow: 0 -8px 24px rgba(12,45,72,.15);
 }
 
+/* ====== AJUSTE RESPONSIVO MOBILE ====== */
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  header {
+    padding: 15px;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+}
+
