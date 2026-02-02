@@ -3,36 +3,63 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Contato | GABS</title>
+
+<meta name="description" content="Entre em contato com o GABS. Inscreva-se em cursos, eventos e programas de formação em anestesiologia.">
+
 <link rel="stylesheet" href="style.css">
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const path = window.location.pathname.split("/").pop();
+  document.querySelectorAll(".menu a").forEach(link => {
+    if (link.getAttribute("href") === path) {
+      link.classList.add("active");
+    }
+  });
+});
+</script>
+
 </head>
 <body>
 
 <header>
   <div class="container topbar">
-<div class="brand">
-  <img src="imagens/logo.png" alt="GABS">
-  <div class="brand-text">
-    <h1>GABS</h1>
-    <span>Grupo de Anestesiologistas da Baixada Santista</span>
-  </div>
-</div>
 
-    <nav>
+    <div class="brand">
+      <img src="imagens/logo.png" alt="GABS">
+      <div class="brand-text">
+        <h1>GABS</h1>
+        <span>Grupo de Anestesiologistas da Baixada Santista</span>
+      </div>
+    </div>
+
+    <nav class="menu">
       <a href="index.html">Início</a>
       <a href="equipe.html">Equipe</a>
       <a href="servicos.html">Serviços</a>
       <a href="ensino.html">Ensino</a>
+      <a href="eventos.html">Eventos</a>
       <a href="contato.html">Contato</a>
     </nav>
+
   </div>
 </header>
 
 <section class="section">
   <div class="container">
-    <h3>Contato</h3>
+
+    <h2>Contato & Inscrições</h2>
+
+    <p>
+      Entre em contato conosco para informações sobre serviços assistenciais,
+      cursos, eventos e programas de formação.
+    </p>
 
     <div class="cards">
+
+      <!-- ================= DADOS FIXOS ================= -->
 
       <div class="card">
         <h4>Fale Conosco</h4>
@@ -46,23 +73,74 @@
         <p><strong>Telefone:</strong><br>
         (a definir)</p>
 
-<p><strong>WhatsApp:</strong><br>
-(a definir)</p>
+        <p><strong>WhatsApp:</strong><br>
+        (a definir)</p>
+      </div>
 
-</div>
+      <div class="card">
+        <h4>Instagram</h4>
+        <p>@gabs.anestesiologia</p>
 
-<div class="card">
-  <h4>Instagram</h4>
-  <p>@gabs.anestesiologia</p>
+        <img src="imagens/instagram_qr.jpg"
+             alt="QR Code Instagram"
+             style="width:180px; border-radius:12px; margin-top:10px;">
 
-  <img src="imagens/instagram_qr.jpg"
-       alt="QR Code Instagram"
-       style="width:180px; border-radius:12px; margin-top:10px;">
+        <p style="margin-top:10px; font-size:14px;">
+          Escaneie para acessar nosso Instagram
+        </p>
+      </div>
 
-  <p style="margin-top:10px; font-size:14px;">
-    Escaneie para acessar nosso Instagram
-  </p>
-</div>
+      <!-- ================= FORMULÁRIO ================= -->
+
+      <div class="card">
+        <h4>Formulário de Contato / Inscrição</h4>
+
+        <form class="contact-form">
+
+          <label>
+            Nome completo *
+            <input type="text" name="nome" required>
+          </label>
+
+          <label>
+            Email *
+            <input type="email" name="email" required>
+          </label>
+
+          <label>
+            Telefone / WhatsApp
+            <input type="tel" name="telefone">
+          </label>
+
+          <label>
+            Assunto *
+            <select name="assunto" required>
+              <option value="">Selecione</option>
+              <option value="servicos">Serviços assistenciais</option>
+              <option value="curso">Cursos</option>
+              <option value="evento">Eventos</option>
+              <option value="estagio">Estágios</option>
+              <option value="outros">Outros</option>
+            </select>
+          </label>
+
+          <label>
+            Mensagem *
+            <textarea name="mensagem" rows="5" required></textarea>
+          </label>
+
+          <button type="submit" class="btn-primary">
+            Enviar mensagem
+          </button>
+
+          <p style="font-size:13px; margin-top:10px;">
+            * Campos obrigatórios
+          </p>
+
+        </form>
+      </div>
+
+    </div>
 
   </div>
 </section>
@@ -70,10 +148,10 @@
 <footer>
   <div class="container">
     <p>
-  <strong>GABS</strong><br>
-  Grupo de Anestesiologistas da Baixada Santista © 2026
-</p>
-
+      <strong>GABS</strong><br>
+      Grupo de Anestesiologistas da Baixada Santista © 2026
+    </p>
+  </div>
 </footer>
 
 </body>
