@@ -4,80 +4,125 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Serviços | GABS</title>
+
 <link rel="stylesheet" href="style.css">
+
+<script>
+/* Marca item ativo no menu */
+document.addEventListener("DOMContentLoaded", () => {
+  const path = window.location.pathname.split("/").pop();
+  document.querySelectorAll(".menu a").forEach(link => {
+    const href = link.getAttribute("href");
+    if (href === path) {
+      link.classList.add("active");
+    }
+  });
+});
+</script>
+
 </head>
 <body>
 
 <header>
   <div class="container topbar">
-<div class="brand">
-  <img src="imagens/logo.png" alt="GABS">
-  <div class="brand-text">
-    <h1>GABS</h1>
-    <span>Grupo de Anestesiologistas da Baixada Santista</span>
-  </div>
-</div>
 
-    <nav>
+    <div class="brand">
+      <img src="imagens/logo.png" alt="GABS">
+      <div class="brand-text">
+        <h1>GABS</h1>
+        <span>Grupo de Anestesiologistas da Baixada Santista</span>
+      </div>
+    </div>
+
+    <nav class="menu">
       <a href="index.html">Início</a>
       <a href="equipe.html">Equipe</a>
       <a href="servicos.html">Serviços</a>
       <a href="ensino.html">Ensino</a>
+      <a href="eventos.html">Eventos</a>
       <a href="contato.html">Contato</a>
     </nav>
+
   </div>
 </header>
 
 <section class="section">
   <div class="container">
+
     <h3>Nossos Serviços</h3>
 
     <div class="cards">
 
-      <div class="card service-card">
+      <!-- ================= SERVIÇO ================= -->
+
+      <a href="servicos/anestesia-geral.html" class="card service-card">
         <div class="service-icon">🩺</div>
         <h4>Anestesia Geral</h4>
-        <p>Assistência anestésica em procedimentos de média e alta complexidade, com foco absoluto em segurança e excelência clínica.</p>
-      </div>
+        <p>
+          Assistência anestésica em procedimentos de média e alta complexidade,
+          com foco absoluto em segurança do paciente, monitorização avançada e
+          protocolos baseados em evidências.
+        </p>
+      </a>
 
-      <div class="card service-card">
+      <a href="servicos/anestesia-regional.html" class="card service-card">
         <div class="service-icon">🧠</div>
         <h4>Anestesia Regional</h4>
-<p>
-  Técnicas modernas de anestesia regional e bloqueios realizados com
-  ultrassonografia, promovendo maior precisão, segurança e recuperação mais rápida.
-</p>
+        <p>
+          Técnicas modernas de anestesia regional e bloqueios guiados por
+          ultrassonografia, promovendo maior precisão, segurança e recuperação
+          mais rápida.
+        </p>
+      </a>
 
-      </div>
-
-      <div class="card service-card">
+      <a href="servicos/sedacao.html" class="card service-card">
         <div class="service-icon">💉</div>
         <h4>Sedação</h4>
-        <p>Controle da dor e conforto em procedimentos diagnósticos e terapêuticos, com monitorização contínua.</p>
-      </div>
+        <p>
+          Controle da dor e conforto em procedimentos diagnósticos e terapêuticos,
+          com vigilância contínua e suporte anestésico especializado.
+        </p>
+      </a>
 
-      <div class="card service-card">
+      <a href="servicos/dor.html" class="card service-card">
         <div class="service-icon">🩹</div>
         <h4>Tratamento da Dor</h4>
-        <p>Manejo multimodal da dor aguda e crônica, com protocolos individualizados e tecnologia de ponta.</p>
-      </div>
+        <p>
+          Manejo multimodal da dor aguda e crônica, com protocolos individualizados
+          e tecnologias modernas para alívio e qualidade de vida.
+        </p>
+      </a>
 
-      <div class="card service-card">
+      <a href="servicos/ensino.html" class="card service-card">
         <div class="service-icon">🎓</div>
         <h4>Ensino e Treinamento</h4>
-        <p>Formação contínua de profissionais da saúde por meio de cursos, estágios e capacitações especializadas.</p>
+        <p>
+          Formação contínua de profissionais da saúde por meio de cursos,
+          estágios supervisionados, programas educacionais e capacitação técnica.
+        </p>
+      </a>
+
+      <!-- espaço para novos serviços no futuro -->
+
+      <div class="card service-card placeholder">
+        <div class="service-icon">➕</div>
+        <h4>Novo Serviço</h4>
+        <p>
+          Espaço reservado para novos serviços e áreas de atuação do GABS.
+        </p>
       </div>
 
     </div>
+
   </div>
 </section>
 
 <footer>
   <div class="container">
-  <p>
-  <strong>GABS</strong><br>
-  Grupo de Anestesiologistas da Baixada Santista © 2026
-</p>
+    <p>
+      <strong>GABS</strong><br>
+      Grupo de Anestesiologistas da Baixada Santista © 2026
+    </p>
   </div>
 </footer>
 
