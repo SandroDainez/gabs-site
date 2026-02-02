@@ -3,24 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>GABS | Grupo de Anestesiologia</title>
+
 <link rel="stylesheet" href="style.css">
 
-<script>
-/* Marca item ativo no menu */
-document.addEventListener("DOMContentLoaded", () => {
-  const path = window.location.pathname.split("/").pop();
-  document.querySelectorAll(".menu a").forEach(link => {
-    const href = link.getAttribute("href");
-    if (href === path || (path === "" && href === "index.html")) {
-      link.classList.add("active");
-    }
-  });
-});
-</script>
+<style>
+/* ===== ALERTA DE CONSTRUÇÃO ===== */
+.site-alert {
+  background: linear-gradient(90deg, #b45309, #92400e);
+  color: white;
+  padding: 14px 20px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.site-alert strong {
+  font-weight: 700;
+}
+</style>
 
 </head>
 <body>
+
+<!-- ===== ALERTA ===== -->
+<div class="site-alert">
+  ⚠️ <strong>Site em construção.</strong>
+  Algumas informações ainda são ilustrativas e nem todos os conteúdos são reais.
+  Em breve serão adicionados dados oficiais e definitivos.
+</div>
 
 <header>
   <div class="container topbar">
@@ -50,6 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <div class="hero-text">
       <h2>Excelência em Anestesiologia</h2>
+
       <p>
         O GABS é um grupo médico especializado em anestesiologia, comprometido com
         segurança, inovação, qualidade assistencial e formação contínua.
@@ -102,5 +115,31 @@ document.addEventListener("DOMContentLoaded", () => {
         <h4>Atualização Científica Permanente</h4>
         <p>
           Compromisso com inovação, participação em congressos, produção científica
-          e incorporação de novas tecnologias na prática an
+          e incorporação de novas tecnologias na prática anestésica.
+        </p>
+      </div>
+
+      <div class="card">
+        <h4>Protocolos Institucionais e Segurança do Paciente</h4>
+        <p>
+          Atuação guiada por protocolos clínicos rigorosos, foco em qualidade assistencial,
+          gestão de riscos e máxima segurança ao paciente.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>
+      <strong>GABS</strong><br>
+      Grupo de Anestesiologistas da Baixada Santista © 2026
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
 
