@@ -12,12 +12,16 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const path = window.location.pathname.split("/").pop();
-  document.querySelectorAll(".menu a").forEach(link => {
-    if (link.getAttribute("href") === path) {
-      link.classList.add("active");
-    }
-  });
+  const params = new URLSearchParams(window.location.search);
+  const assunto = params.get("assunto");
+
+  if (assunto) {
+    const select = document.querySelector("select[name='assunto']");
+    if (select) select.value = assunto;
+
+    const form = document.getElementById("formulario");
+    if (form) form.scrollIntoView({ behavior: "smooth" });
+  }
 });
 </script>
 
@@ -59,8 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <div class="cards">
 
-      <!-- ================= DADOS FIXOS ================= -->
-
       <div class="card">
         <h4>Fale Conosco</h4>
 
@@ -90,9 +92,9 @@ document.addEventListener("DOMContentLoaded", () => {
         </p>
       </div>
 
-      <!-- ================= FORMULÁRIO ================= -->
+      <!-- FORMULÁRIO -->
 
-      <div class="card">
+      <div class="card" id="formulario">
         <h4>Formulário de Contato / Inscrição</h4>
 
         <form class="contact-form">
@@ -132,10 +134,6 @@ document.addEventListener("DOMContentLoaded", () => {
           <button type="submit" class="btn-primary">
             Enviar mensagem
           </button>
-
-          <p style="font-size:13px; margin-top:10px;">
-            * Campos obrigatórios
-          </p>
 
         </form>
       </div>
