@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Eventos | GABS</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eventos | GABS</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script>
+/* Marca item ativo no menu */
+document.addEventListener("DOMContentLoaded", () => {
+  const path = window.location.pathname.split("/").pop();
+  document.querySelectorAll(".menu a").forEach(link => {
+    if (link.getAttribute("href") === path) {
+      link.classList.add("active");
+    }
+  });
+});
+</script>
+
 </head>
 
 <body>
 
 <header>
   <div class="container topbar">
+
     <div class="brand">
       <img src="imagens/logo.png" alt="GABS">
       <div class="brand-text">
@@ -26,6 +42,7 @@
       <a href="eventos.html">Eventos</a>
       <a href="contato.html">Contato</a>
     </nav>
+
   </div>
 </header>
 
@@ -34,7 +51,8 @@
   <h2>Calendário de Eventos</h2>
   <p>Acompanhe nossos próximos cursos, simpósios e eventos científicos.</p>
 
-  <!-- Calendário visual -->
+  <!-- ================= CALENDÁRIO ================= -->
+
   <section class="calendar">
     <h3>Janeiro 2026</h3>
 
@@ -49,14 +67,24 @@
 
       <div class="day empty"></div>
       <div class="day empty"></div>
-      <div class="day">1</div>
+
+      <div class="day">
+        <a href="eventos/curso-atualizacao-2026.html">1</a>
+      </div>
+
       <div class="day">2</div>
       <div class="day">3</div>
       <div class="day">4</div>
       <div class="day">5</div>
 
       <div class="day">6</div>
-      <div class="day event">7<br><span>Curso</span></div>
+
+      <div class="day event">
+        <a href="eventos/curso-atualizacao-2026.html">
+          7<br><span>Curso</span>
+        </a>
+      </div>
+
       <div class="day">8</div>
       <div class="day">9</div>
       <div class="day">10</div>
@@ -65,7 +93,13 @@
 
       <div class="day">13</div>
       <div class="day">14</div>
-      <div class="day event">15<br><span>Simpósio</span></div>
+
+      <div class="day event">
+        <a href="eventos/simposio-gabs-2026.html">
+          15<br><span>Simpósio</span>
+        </a>
+      </div>
+
       <div class="day">16</div>
       <div class="day">17</div>
       <div class="day">18</div>
@@ -73,31 +107,35 @@
     </div>
   </section>
 
-  <!-- Lista de eventos -->
+  <!-- ================= LISTA ================= -->
+
   <section class="event-list">
     <h3>Próximos Eventos</h3>
 
-    <div class="event-card">
+    <a href="eventos/curso-atualizacao-2026.html" class="event-card">
       <h4>Curso de Atualização em Anestesiologia</h4>
       <p><strong>Data:</strong> 07 de janeiro de 2026</p>
       <p><strong>Local:</strong> Santos – SP</p>
       <p><strong>Descrição:</strong> Curso teórico-prático com foco em segurança anestésica.</p>
-    </div>
+    </a>
 
-    <div class="event-card">
+    <a href="eventos/simposio-gabs-2026.html" class="event-card">
       <h4>Simpósio GABS de Anestesiologia</h4>
       <p><strong>Data:</strong> 15 de janeiro de 2026</p>
       <p><strong>Local:</strong> Beneficência Portuguesa de Santos</p>
       <p><strong>Descrição:</strong> Evento científico com palestrantes convidados.</p>
-    </div>
+    </a>
 
   </section>
 
 </main>
 
 <footer>
-  <p>© 2026 GABS – Grupo de Anestesiologistas da Baixada Santista</p>
+  <div class="container">
+    <p>© 2026 GABS – Grupo de Anestesiologistas da Baixada Santista</p>
+  </div>
 </footer>
 
 </body>
 </html>
+
