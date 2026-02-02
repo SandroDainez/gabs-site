@@ -4,27 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ensino | GABS</title>
-
 <link rel="stylesheet" href="style.css">
-
-<script>
-/* Marca item ativo no menu */
-document.addEventListener("DOMContentLoaded", () => {
-  const path = window.location.pathname.split("/").pop();
-  document.querySelectorAll(".menu a").forEach(link => {
-    if (link.getAttribute("href") === path) {
-      link.classList.add("active");
-    }
-  });
-});
-</script>
-
 </head>
 <body>
 
 <header>
   <div class="container topbar">
-
     <div class="brand">
       <img src="imagens/logo.png" alt="GABS">
       <div class="brand-text">
@@ -41,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
       <a href="eventos.html">Eventos</a>
       <a href="contato.html">Contato</a>
     </nav>
-
   </div>
 </header>
 
@@ -50,72 +34,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <h3>Ensino & Formação</h3>
 
-    <p>
-      O GABS desenvolve atividades de ensino e capacitação profissional,
-      promovendo atualização científica e formação ética em anestesiologia.
-    </p>
-
     <div class="cards">
 
-      <!-- ================= CARD ================= -->
-
       <a href="ensino/acesso-venoso.html" class="card">
-        <div class="mini-icon">🩺</div>
-        <h4>Acesso Venoso Guiado por Ultrassonografia</h4>
-        <p>
-          Treinamento prático com foco em segurança, precisão técnica e
-          padronização institucional.
-        </p>
+        <h4>Acesso Venoso Guiado por Ultrassom</h4>
+        <p>Treinamento prático intensivo.</p>
       </a>
 
       <a href="ensino/via-aerea.html" class="card">
-        <div class="mini-icon">🫁</div>
         <h4>Manejo de Via Aérea</h4>
-        <p>
-          Capacitação do básico ao avançado, com simulação realística
-          e abordagem sistematizada.
-        </p>
+        <p>Do básico ao avançado.</p>
       </a>
 
       <a href="ensino/estagio-internacional.html" class="card">
-        <div class="mini-icon">🌎</div>
-        <h4>Estágio em Anestesiologia (Estudantes Estrangeiros)</h4>
-        <p>
-          Programa desenvolvido conforme normas do CFM e CRMs,
-          respeitando integralmente a legislação brasileira.
-        </p>
+        <h4>Estágio Internacional</h4>
+        <p>Programa para estudantes estrangeiros.</p>
       </a>
 
       <a href="ensino/estagio-sba.html" class="card">
-        <div class="mini-icon">🏅</div>
-        <h4>Estágio em Anestesiologia (Reconhecido pela SBA)</h4>
-        <p>
-          Programa estruturado segundo padrões da Sociedade Brasileira
-          de Anestesiologia, com foco em excelência técnica e ética.
-        </p>
+        <h4>CET GABS – SBA</h4>
+        <p>Centro oficial reconhecido.</p>
       </a>
 
       <a href="ensino/estagio-institucional.html" class="card">
-        <div class="mini-icon">🏥</div>
-        <h4>Estágio em Anestesiologia (Programa Institucional)</h4>
-        <p>
-          Formação prática supervisionada oferecida pelo GABS,
-          com desenvolvimento técnico-científico contínuo.
-        </p>
+        <h4>Estágio Institucional</h4>
+        <p>Formação supervisionada.</p>
       </a>
 
-      <!-- espaço para cursos futuros -->
-
-      <div class="card placeholder">
-        <div class="mini-icon">➕</div>
-        <h4>Novo Curso / Programa</h4>
-        <p>
-          Espaço reservado para novas iniciativas educacionais do GABS.
-        </p>
-      </div>
-
     </div>
-
   </div>
 </section>
 
