@@ -4,28 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Serviços | GABS</title>
-
 <link rel="stylesheet" href="style.css">
-
-<script>
-/* Marca item ativo no menu */
-document.addEventListener("DOMContentLoaded", () => {
-  const path = window.location.pathname.split("/").pop();
-  document.querySelectorAll(".menu a").forEach(link => {
-    const href = link.getAttribute("href");
-    if (href === path) {
-      link.classList.add("active");
-    }
-  });
-});
-</script>
-
 </head>
 <body>
 
 <header>
   <div class="container topbar">
-
     <div class="brand">
       <img src="imagens/logo.png" alt="GABS">
       <div class="brand-text">
@@ -42,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
       <a href="eventos.html">Eventos</a>
       <a href="contato.html">Contato</a>
     </nav>
-
   </div>
 </header>
 
@@ -53,67 +36,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <div class="cards">
 
-      <!-- ================= SERVIÇO ================= -->
-
       <a href="servicos/anestesia-geral.html" class="card service-card">
         <div class="service-icon">🩺</div>
         <h4>Anestesia Geral</h4>
-        <p>
-          Assistência anestésica em procedimentos de média e alta complexidade,
-          com foco absoluto em segurança do paciente, monitorização avançada e
-          protocolos baseados em evidências.
-        </p>
+        <p>Assistência anestésica em procedimentos de média e alta complexidade.</p>
       </a>
 
       <a href="servicos/anestesia-regional.html" class="card service-card">
         <div class="service-icon">🧠</div>
         <h4>Anestesia Regional</h4>
-        <p>
-          Técnicas modernas de anestesia regional e bloqueios guiados por
-          ultrassonografia, promovendo maior precisão, segurança e recuperação
-          mais rápida.
-        </p>
+        <p>Técnicas modernas guiadas por ultrassonografia.</p>
       </a>
 
       <a href="servicos/sedacao.html" class="card service-card">
         <div class="service-icon">💉</div>
         <h4>Sedação</h4>
-        <p>
-          Controle da dor e conforto em procedimentos diagnósticos e terapêuticos,
-          com vigilância contínua e suporte anestésico especializado.
-        </p>
+        <p>Conforto e segurança em procedimentos diagnósticos.</p>
       </a>
 
       <a href="servicos/dor.html" class="card service-card">
         <div class="service-icon">🩹</div>
         <h4>Tratamento da Dor</h4>
-        <p>
-          Manejo multimodal da dor aguda e crônica, com protocolos individualizados
-          e tecnologias modernas para alívio e qualidade de vida.
-        </p>
+        <p>Manejo multimodal da dor aguda e crônica.</p>
       </a>
 
       <a href="servicos/ensino.html" class="card service-card">
         <div class="service-icon">🎓</div>
         <h4>Ensino e Treinamento</h4>
-        <p>
-          Formação contínua de profissionais da saúde por meio de cursos,
-          estágios supervisionados, programas educacionais e capacitação técnica.
-        </p>
+        <p>Cursos e capacitações promovidos pelo GABS.</p>
       </a>
 
-      <!-- espaço para novos serviços no futuro -->
-
-      <div class="card service-card placeholder">
-        <div class="service-icon">➕</div>
-        <h4>Novo Serviço</h4>
-        <p>
-          Espaço reservado para novos serviços e áreas de atuação do GABS.
-        </p>
-      </div>
-
     </div>
-
   </div>
 </section>
 
