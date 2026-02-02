@@ -3,14 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <title>Equipe – GABS Anestesiologia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="style.css">
+
+  <script>
+    /* Marca item ativo no menu */
+    document.addEventListener("DOMContentLoaded", () => {
+      const path = window.location.pathname.split("/").pop();
+      document.querySelectorAll(".menu a").forEach(link => {
+        const href = link.getAttribute("href");
+        if (href === path || path === "") {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
 </head>
 
 <body>
 
 <header>
   <div class="container topbar">
-    
+
     <div class="brand">
       <img src="imagens/logo.png" alt="GABS">
       <div class="brand-text">
@@ -24,97 +39,95 @@
       <a href="equipe.html">Equipe</a>
       <a href="servicos.html">Serviços</a>
       <a href="ensino.html">Ensino</a>
+      <a href="eventos.html">Eventos</a>
       <a href="contato.html">Contato</a>
     </nav>
 
   </div>
 </header>
 
-<section>
-  <h2>Nossa Equipe</h2>
+<section class="section">
+  <div class="container">
 
-  <div class="equipe">
+    <h2>Nossa Equipe</h2>
 
-    <!-- ===== MEMBROS DA EQUIPE ===== -->
+    <div class="equipe">
 
-<!-- ===== MEMBROS DA EQUIPE ===== -->
+      <!-- ================= MEMBROS ================= -->
 
-<div class="membro">
-  <img src="imagens/equipe_placeholder.jpg">
-  <h3>Dr(a). Nome</h3>
-  <p>CRM: _____</p>
-  <p>RQE: _____</p>
-</div>
+      <a href="medicos/dr-exemplo.html" class="membro">
+        <img src="imagens/equipe_placeholder.jpg" alt="Dr. Nome">
+        <h3>Dr(a). Nome</h3>
+        <p>CRM: _____</p>
+        <p>RQE: _____</p>
+      </a>
 
-<div class="membro">
-  <img src="imagens/equipe_placeholder.jpg">
-  <h3>Dr(a). Nome</h3>
-  <p>CRM: _____</p>
-  <p>RQE: _____</p>
-</div>
+      <a href="medicos/dr-exemplo.html" class="membro">
+        <img src="imagens/equipe_placeholder.jpg" alt="Dr. Nome">
+        <h3>Dr(a). Nome</h3>
+        <p>CRM: _____</p>
+        <p>RQE: _____</p>
+      </a>
 
-<div class="membro">
-  <img src="imagens/equipe_placeholder.jpg">
-  <h3>Dr(a). Nome</h3>
-  <p>CRM: _____</p>
-  <p>RQE: _____</p>
-</div>
+      <a href="medicos/dr-exemplo.html" class="membro">
+        <img src="imagens/equipe_placeholder.jpg" alt="Dr. Nome">
+        <h3>Dr(a). Nome</h3>
+        <p>CRM: _____</p>
+        <p>RQE: _____</p>
+      </a>
 
-<div class="membro">
-  <img src="imagens/equipe_placeholder.jpg">
-  <h3>Dr(a). Nome</h3>
-  <p>CRM: _____</p>
-  <p>RQE: _____</p>
-</div>
+      <a href="medicos/dr-exemplo.html" class="membro">
+        <img src="imagens/equipe_placeholder.jpg" alt="Dr. Nome">
+        <h3>Dr(a). Nome</h3>
+        <p>CRM: _____</p>
+        <p>RQE: _____</p>
+      </a>
 
-<div class="membro">
-  <img src="imagens/equipe_placeholder.jpg">
-  <h3>Dr(a). Nome</h3>
-  <p>CRM: _____</p>
-  <p>RQE: _____</p>
-</div>
+      <a href="medicos/dr-exemplo.html" class="membro">
+        <img src="imagens/equipe_placeholder.jpg" alt="Dr. Nome">
+        <h3>Dr(a). Nome</h3>
+        <p>CRM: _____</p>
+        <p>RQE: _____</p>
+      </a>
 
-<div class="membro">
-  <img src="imagens/equipe_placeholder.jpg">
-  <h3>Dr(a). Nome</h3>
-  <p>CRM: _____</p>
-  <p>RQE: _____</p>
-</div>
+      <a href="medicos/dr-exemplo.html" class="membro">
+        <img src="imagens/equipe_placeholder.jpg" alt="Dr. Nome">
+        <h3>Dr(a). Nome</h3>
+        <p>CRM: _____</p>
+        <p>RQE: _____</p>
+      </a>
 
-<div class="membro">
-  <img src="imagens/equipe_placeholder.jpg">
-  <h3>Dr(a). Nome</h3>
-  <p>CRM: _____</p>
-  <p>RQE: _____</p>
-</div>
+      <a href="medicos/dr-exemplo.html" class="membro">
+        <img src="imagens/equipe_placeholder.jpg" alt="Dr. Nome">
+        <h3>Dr(a). Nome</h3>
+        <p>CRM: _____</p>
+        <p>RQE: _____</p>
+      </a>
 
-<div class="membro">
-  <img src="imagens/equipe_placeholder.jpg">
-  <h3>Dr(a). Nome</h3>
-  <p>CRM: _____</p>
-  <p>RQE: _____</p>
-</div>
+      <a href="medicos/dr-exemplo.html" class="membro">
+        <img src="imagens/equipe_placeholder.jpg" alt="Dr. Nome">
+        <h3>Dr(a). Nome</h3>
+        <p>CRM: _____</p>
+        <p>RQE: _____</p>
+      </a>
 
-<div class="membro">
-  <img src="imagens/equipe_placeholder.jpg">
-  <h3>Dr(a). Nome</h3>
-  <p>CRM: _____</p>
-  <p>RQE: _____</p>
-</div>
+      <a href="medicos/dr-exemplo.html" class="membro">
+        <img src="imagens/equipe_placeholder.jpg" alt="Dr. Nome">
+        <h3>Dr(a). Nome</h3>
+        <p>CRM: _____</p>
+        <p>RQE: _____</p>
+      </a>
 
-<div class="membro">
-  <img src="imagens/equipe_placeholder.jpg">
-  <h3>Dr(a). Nome</h3>
-  <p>CRM: _____</p>
-  <p>RQE: _____</p>
+    </div>
 
-</div>
+    <!-- ================= PAGINAÇÃO ================= -->
 
-  <!-- ===== PAGINAÇÃO ===== -->
-  <div class="pagination">
-    <button id="prevPage">← Anterior</button>
-    <span id="pageInfo">Página 1</span>
-    <button id="nextPage">Próxima →</button>
+    <div class="pagination">
+      <button id="prevPage">← Anterior</button>
+      <span id="pageInfo">Página 1</span>
+      <button id="nextPage">Próxima →</button>
+    </div>
+
   </div>
 </section>
 
