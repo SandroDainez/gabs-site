@@ -4,27 +4,44 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ensino | GABS</title>
+
 <link rel="stylesheet" href="style.css">
+
+<script>
+/* Marca item ativo no menu */
+document.addEventListener("DOMContentLoaded", () => {
+  const path = window.location.pathname.split("/").pop();
+  document.querySelectorAll(".menu a").forEach(link => {
+    if (link.getAttribute("href") === path) {
+      link.classList.add("active");
+    }
+  });
+});
+</script>
+
 </head>
 <body>
 
 <header>
   <div class="container topbar">
-<div class="brand">
-  <img src="imagens/logo.png" alt="GABS">
-  <div class="brand-text">
-    <h1>GABS</h1>
-    <span>Grupo de Anestesiologistas da Baixada Santista</span>
-  </div>
-</div>
 
-    <nav>
+    <div class="brand">
+      <img src="imagens/logo.png" alt="GABS">
+      <div class="brand-text">
+        <h1>GABS</h1>
+        <span>Grupo de Anestesiologistas da Baixada Santista</span>
+      </div>
+    </div>
+
+    <nav class="menu">
       <a href="index.html">Início</a>
       <a href="equipe.html">Equipe</a>
       <a href="servicos.html">Serviços</a>
       <a href="ensino.html">Ensino</a>
+      <a href="eventos.html">Eventos</a>
       <a href="contato.html">Contato</a>
     </nav>
+
   </div>
 </header>
 
@@ -40,51 +57,66 @@
 
     <div class="cards">
 
-      <div class="card">
+      <!-- ================= CARD ================= -->
+
+      <a href="ensino/acesso-venoso.html" class="card">
         <div class="mini-icon">🩺</div>
         <h4>Acesso Venoso Guiado por Ultrassonografia</h4>
-        <p>Treinamento prático com foco em segurança, precisão técnica e padronização.</p>
-      </div>
+        <p>
+          Treinamento prático com foco em segurança, precisão técnica e
+          padronização institucional.
+        </p>
+      </a>
 
-      <div class="card">
+      <a href="ensino/via-aerea.html" class="card">
         <div class="mini-icon">🫁</div>
         <h4>Manejo de Via Aérea</h4>
-        <p>Capacitação do básico ao avançado, com simulação e abordagem sistematizada.</p>
-      </div>
+        <p>
+          Capacitação do básico ao avançado, com simulação realística
+          e abordagem sistematizada.
+        </p>
+      </a>
 
-      <div class="card">
-  <div class="mini-icon">🌎</div>
-  <h4>Estágio em Anestesiologia (Estudantes Estrangeiros)</h4>
-  <p>
-    Programa destinado a estudantes de medicina estrangeiros, desenvolvido de acordo
-    com as normas vigentes do Conselho Federal de Medicina (CFM) e dos Conselhos
-    Regionais de Medicina (CRM), observando integralmente a legislação brasileira.
-  </p>
-</div>
+      <a href="ensino/estagio-internacional.html" class="card">
+        <div class="mini-icon">🌎</div>
+        <h4>Estágio em Anestesiologia (Estudantes Estrangeiros)</h4>
+        <p>
+          Programa desenvolvido conforme normas do CFM e CRMs,
+          respeitando integralmente a legislação brasileira.
+        </p>
+      </a>
 
-<div class="card">
-  <div class="mini-icon">🏅</div>
-  <h4>Estágio em Anestesiologia (Reconhecido pela SBA)</h4>
-  <p>
-    Programa de estágio estruturado segundo os padrões da Sociedade Brasileira de
-    Anestesiologia (SBA), com foco em excelência técnica, ética profissional e formação
-    científica continuada.
-  </p>
-</div>
+      <a href="ensino/estagio-sba.html" class="card">
+        <div class="mini-icon">🏅</div>
+        <h4>Estágio em Anestesiologia (Reconhecido pela SBA)</h4>
+        <p>
+          Programa estruturado segundo padrões da Sociedade Brasileira
+          de Anestesiologia, com foco em excelência técnica e ética.
+        </p>
+      </a>
 
-      <div class="card">
+      <a href="ensino/estagio-institucional.html" class="card">
         <div class="mini-icon">🏥</div>
         <h4>Estágio em Anestesiologia (Programa Institucional)</h4>
         <p>
-          Estágio supervisionado oferecido pelo próprio GABS, com foco em formação prática,
-          ética profissional e desenvolvimento técnico-científico.
+          Formação prática supervisionada oferecida pelo GABS,
+          com desenvolvimento técnico-científico contínuo.
+        </p>
+      </a>
+
+      <!-- espaço para cursos futuros -->
+
+      <div class="card placeholder">
+        <div class="mini-icon">➕</div>
+        <h4>Novo Curso / Programa</h4>
+        <p>
+          Espaço reservado para novas iniciativas educacionais do GABS.
         </p>
       </div>
 
     </div>
 
   </div>
-
 </section>
 
 <footer>
@@ -98,5 +130,4 @@
 
 </body>
 </html>
-
 
