@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <title>Contato | GABS</title>
 
-<meta name="description" content="Entre em contato com o GABS. Inscreva-se em cursos, eventos e programas de formação em anestesiologia.">
+<meta name="description" content="Entre em contato com o GABS. Inscreva-se em cursos, eventos e programas de formação." />
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css" />
 
 <style>
 .form-wrapper {
-  max-width: 820px;
-  margin: 60px auto;
+  max-width: 900px;
+  margin: 80px auto;
   background: #ffffff;
-  padding: 50px;
-  border-radius: 18px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  padding: 60px;
+  border-radius: 20px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.08);
 }
 
 .form-header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 45px;
 }
 
 .form-header h2 {
-  font-size: 32px;
+  font-size: 34px;
   margin-bottom: 10px;
 }
 
@@ -37,7 +37,7 @@
 
 .form-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 22px;
 }
 
@@ -61,6 +61,11 @@
   transition: 0.2s;
 }
 
+.form-group textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
@@ -69,13 +74,8 @@
   box-shadow: 0 0 0 2px rgba(11,53,88,0.12);
 }
 
-textarea {
-  min-height: 130px;
-  resize: vertical;
-}
-
 .form-actions {
-  margin-top: 30px;
+  margin-top: 35px;
   text-align: center;
 }
 
@@ -83,7 +83,7 @@ textarea {
   background: linear-gradient(135deg,#0b3558,#145c9e);
   border: none;
   color: white;
-  padding: 16px 44px;
+  padding: 16px 50px;
   font-size: 16px;
   border-radius: 50px;
   cursor: pointer;
@@ -92,7 +92,7 @@ textarea {
 
 .submit-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
 }
 
 .status-msg {
@@ -101,7 +101,7 @@ textarea {
   display: none;
 }
 
-.status-success { color: green; }
+.status-success { color: #1c7c3c; }
 .status-error { color: crimson; }
 </style>
 
@@ -115,8 +115,8 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
 
     status.style.display = "block";
-    status.textContent = "Enviando sua mensagem...";
     status.className = "status-msg";
+    status.textContent = "Enviando sua mensagem...";
 
     const data = {
       nome: form.nome.value,
@@ -143,7 +143,6 @@ document.addEventListener("DOMContentLoaded", () => {
       status.textContent = "❌ Erro ao enviar. Tente novamente mais tarde.";
       status.classList.add("status-error");
     }
-
   });
 
 });
