@@ -1,78 +1,147 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<title>Curso de Atualização em Anestesiologia 2026 – GABS</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="stylesheet" href="../style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso de Atualização em Anestesiologia 2026 | GABS</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .event-detail-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      margin-top: 40px;
+    }
+    @media (min-width: 900px) {
+      .event-detail-grid { grid-template-columns: 1fr 1fr; align-items: start; }
+    }
+    .info-block {
+      background: white;
+      border: 1px solid rgba(13,131,98,0.08);
+      border-radius: var(--radius-xl);
+      padding: 32px;
+      box-shadow: 0 10px 30px rgba(13,131,98,0.04);
+    }
+    .info-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+      color: var(--color-cyan-500); text-transform: uppercase; margin-bottom: 16px;
+    }
+    .info-block h3 { font-family: var(--font-display); font-size: 22px; margin-bottom: 16px; }
+    .info-list { list-style: none; padding: 0; margin: 0; }
+    .info-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--color-border);
+      font-size: 15px; color: var(--color-stone-600);
+    }
+    .info-list li:last-child { border-bottom: none; }
+    .info-list strong { color: var(--color-stone-900); }
+    .breadcrumb { font-size: 13px; color: var(--color-stone-600); margin-bottom: 32px; }
+    .breadcrumb a { color: var(--color-cyan-500); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+  </style>
 </head>
 <body>
 
-<header>
-  <div class="container topbar">
+<main class="site-wrapper">
+  <div class="site-inner">
 
-    <div class="brand">
-      <img src="../imagens/logo.png" alt="GABS">
-      <div class="brand-text">
-        <h1>GABS</h1>
-        <span>Grupo de Anestesiologistas da Baixada Santista</span>
+    <nav class="nav-pill">
+      <div class="brand">
+        <div class="brand-icon">G</div>
+        <div class="brand-text">GABS</div>
       </div>
-    </div>
+      <nav class="menu">
+        <a href="../index.html">Início</a>
+        <a href="../sobre.html">Sobre</a>
+        <a href="../equipe.html">Equipe</a>
+        <a href="../servicos.html">Serviços</a>
+        <a href="../ensino.html">Ensino</a>
+        <a href="../eventos.html" class="active">Eventos</a>
+        <a href="../faq.html">Dúvidas</a>
+        <a href="../recursos.html">Recursos</a>
+      </nav>
+      <a href="../contato.html" class="nav-cta">Contato</a>
+    </nav>
 
-<nav class="menu">
-  <a href="../index.html">Início</a>
-  <a href="../equipe.html">Equipe</a>
-  <a href="../servicos.html">Serviços</a>
-  <a href="../ensino.html">Ensino</a>
-  <a href="../eventos.html">Eventos</a>
-  <a href="../contato.html">Contato</a>
-</nav>
+    <!-- HERO DO EVENTO -->
+    <section class="hero" style="min-height: auto; padding-top: 80px; padding-bottom: 40px; text-align: center;">
+      <div class="hero-text" style="max-width: 800px; margin: 0 auto;">
+        <p class="breadcrumb">
+          <a href="../index.html">Início</a> ›
+          <a href="../eventos.html">Eventos</a> ›
+          Curso de Atualização 2026
+        </p>
+        <div class="hero-label" style="display:inline-flex; align-items:center; margin: 0 auto 24px;">
+          <span class="label-dot"></span> Evento Científico
+        </div>
+        <h1 style="font-size: 52px; text-align: center;">
+          Curso de Atualização<br>em Anestesiologia 2026
+        </h1>
+        <p style="text-align: center; margin: 0 auto 40px; font-size: 18px;">
+          Evento científico voltado à atualização profissional de anestesiologistas e médicos da área perioperatória.
+        </p>
+        <a href="../contato.html?assunto=Cursos" class="btn-primary">Inscreva-se neste evento</a>
+      </div>
+    </section>
+
+    <!-- DETALHES DO EVENTO -->
+    <section class="section" style="padding-top: 0; margin-top: 0;">
+      <div class="event-detail-grid">
+
+        <div class="info-block scroll-reveal">
+          <div class="info-label">Informações</div>
+          <h3>Detalhes do Evento</h3>
+          <ul class="info-list">
+            <li><strong>Data:</strong> 07 de Janeiro de 2026</li>
+            <li><strong>Local:</strong> Santos – SP</li>
+            <li><strong>Formato:</strong> Presencial</li>
+            <li><strong>Público-alvo:</strong> Anestesiologistas e médicos perioperatórios</li>
+            <li><strong>Vagas:</strong> A confirmar</li>
+            <li><strong>Inscrição:</strong> Via formulário de contato</li>
+          </ul>
+        </div>
+
+        <div class="info-block scroll-reveal">
+          <div class="info-label">Programa</div>
+          <h3>Conteúdo Programático</h3>
+          <ul class="info-list">
+            <li>Atualizações em anestesia regional guiada por ultrassom</li>
+            <li>Manejo da via aérea difícil</li>
+            <li>Anestesia para cirurgia robótica</li>
+            <li>Medicina perioperatória baseada em evidências</li>
+            <li>Casos clínicos comentados por especialistas</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div style="text-align: center; margin-top: 56px;">
+        <a href="../contato.html?assunto=Cursos" class="btn-primary">Inscreva-se agora</a>
+        <a href="../eventos.html" class="btn-secondary" style="margin-left: 16px;">Ver todos os eventos</a>
+      </div>
+    </section>
+
+    <footer>
+      <h2>Mantenha o Padrão Ouro.</h2>
+      <p>Grupo de Anestesiologistas da Baixada Santista © 2026. Segurança, Inovação e Qualidade Assistencial.</p>
+      <div class="footer-cta">
+        <a href="../contato.html" class="btn-primary">Fale com a Administração</a>
+      </div>
+    </footer>
+
   </div>
-</header>
+</main>
 
-<section class="section">
-  <div class="container">
-
-    <p class="breadcrumb">
-      <a href="../index.html">Início</a> ›
-      <a href="../eventos.html">Eventos</a> ›
-      Curso de Atualização 2026
-    </p>
-
-    <h2>Curso de Atualização em Anestesiologia – 2026</h2>
-
-    <p>
-      Evento científico voltado à atualização profissional de anestesiologistas
-      e médicos da área perioperatória.
-    </p>
-
-    <h3>Informações</h3>
-    <ul>
-      <li><strong>Data:</strong> 07 de janeiro de 2026</li>
-      <li><strong>Local:</strong> Santos – SP</li>
-      <li><strong>Formato:</strong> Presencial</li>
-    </ul>
-
-    <div style="margin-top:40px;">
-      <a href="../contato.html?assunto=evento#formulario" class="btn-primary">
-        Inscreva-se neste evento
-      </a>
-    </div>
-
-  </div>
-</section>
-
-<footer>
-  <div class="container">
-    <p>
-      <strong>GABS</strong><br>
-      Grupo de Anestesiologistas da Baixada Santista © 2026
-    </p>
-  </div>
-</footer>
-
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+        else if (entry.boundingClientRect.top > 0) entry.target.classList.remove('visible');
+      });
+    }, { root: null, threshold: 0.1, rootMargin: "0px" });
+    document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+  });
+</script>
 </body>
 </html>
-

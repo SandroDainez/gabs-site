@@ -1,79 +1,117 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ensino | GABS</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Programa de ensino e formação do GABS: CET reconhecido pela SBA, estágios supervisionados, acesso venoso guiado e capacitações internacionais.">
+  <title>Ensino & Formação | GABS Anestesiologia</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <div class="container topbar">
-    <div class="brand">
-      <img src="imagens/logo.png" alt="GABS">
-      <div class="brand-text">
-        <h1>GABS</h1>
-        <span>Grupo de Anestesiologistas da Baixada Santista</span>
+<main class="site-wrapper">
+  <div class="site-inner">
+
+    <!-- HEADER / NAV PILL -->
+    <nav class="nav-pill">
+      <div class="brand">
+        <div class="brand-icon">G</div>
+        <div class="brand-text">GABS</div>
       </div>
-    </div>
-
-    <nav class="menu">
-      <a href="index.html">Início</a>
-      <a href="equipe.html">Equipe</a>
-      <a href="servicos.html">Serviços</a>
-      <a href="ensino.html">Ensino</a>
-      <a href="eventos.html">Eventos</a>
-      <a href="contato.html">Contato</a>
+      <nav class="menu">
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="equipe.html">Equipe</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="ensino.html" class="active">Ensino</a>
+        <a href="eventos.html">Eventos</a>
+        <a href="faq.html">Dúvidas</a>
+        <a href="recursos.html">Recursos</a>
+      </nav>
+      <a href="contato.html" class="nav-cta">Contato</a>
     </nav>
+
+    <!-- MICRO-HERO -->
+    <section class="hero" style="min-height: auto; align-items: center; justify-content: center; padding-top: 100px; padding-bottom: 40px; text-align: center;">
+      <div class="hero-text" style="max-width: 800px; margin: 0 auto;">
+        <div class="hero-label" style="display:inline-flex; align-items: center; margin: 0 auto 32px;">
+          <span class="label-dot"></span> Programa de Capacitação
+        </div>
+        <h1 style="font-size: 64px; text-align: center;">
+          Ensino de<br>Excelência Científica
+        </h1>
+        <p style="text-align: center; margin: 0 auto 40px; font-size: 20px;">
+          Formação técnica intensiva e supervisionada para a próxima geração de anestesiologistas, com suporte internacional e reconhecimento oficial.
+        </p>
+      </div>
+    </section>
+
+    <!-- GRID BENTO DE ENSINO -->
+    <section class="section" style="padding-top: 0; margin-top: 0;">
+      <div class="container" style="max-width: 100%; padding: 0;">
+        <div class="cards" style="margin-top: 32px;">
+
+          <a href="ensino/acesso-venoso.html" class="card card-featured-light card-featured-wide scroll-reveal">
+            <div class="service-icon">✦</div>
+            <h3>Acesso Venoso Guiado por Ultrassom</h3>
+            <p>Treinamento prático intensivo com simuladores de alta fidelidade, orientado por especialistas com décadas de experiência em ambientes cirúrgicos de alta demanda.</p>
+          </a>
+
+          <a href="ensino/via-aerea.html" class="card scroll-reveal">
+            <div class="service-icon">✦</div>
+            <h3>Manejo de Via Aérea</h3>
+            <p>Do básico ao avançado — protocolos de intubação difícil e dispositivos de resgate.</p>
+          </a>
+
+          <a href="ensino/estagio-sba.html" class="card scroll-reveal">
+            <div class="service-icon">✦</div>
+            <h3>CET GABS – SBA</h3>
+            <p>Centro de Ensino e Treinamento oficial reconhecido pela Sociedade Brasileira de Anestesiologia.</p>
+          </a>
+
+          <a href="ensino/estagio-institucional.html" class="card card-featured-light card-featured-wide scroll-reveal">
+            <div class="service-icon">✦</div>
+            <h3>Estágio Institucional Supervisionado</h3>
+            <p>Formação supervisionada de perto pelo corpo clínico sênior do GABS em todos os centros cirúrgicos parceiros, expondo o residente às mais variadas complexidades de casos reais.</p>
+          </a>
+
+          <a href="ensino/estagio-internacional.html" class="card scroll-reveal">
+            <div class="service-icon">✦</div>
+            <h3>Estágio Internacional</h3>
+            <p>Programa exclusivo para estudantes e profissionais estrangeiros com convênios institucionais.</p>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <h2>Mantenha o Padrão Ouro.</h2>
+      <p>Grupo de Anestesiologistas da Baixada Santista © 2026. Segurança, Inovação e Qualidade Assistencial.</p>
+      <div class="footer-cta">
+        <a href="contato.html" class="btn-primary">Fale com a Administração</a>
+      </div>
+    </footer>
+
   </div>
-</header>
+</main>
 
-<section class="section">
-  <div class="container">
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else if (entry.boundingClientRect.top > 0) {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, { root: null, threshold: 0.1, rootMargin: "0px" });
 
-    <h3>Ensino & Formação</h3>
-
-    <div class="cards">
-
-      <a href="ensino/acesso-venoso.html" class="card">
-        <h4>Acesso Venoso Guiado por Ultrassom</h4>
-        <p>Treinamento prático intensivo.</p>
-      </a>
-
-      <a href="ensino/via-aerea.html" class="card">
-        <h4>Manejo de Via Aérea</h4>
-        <p>Do básico ao avançado.</p>
-      </a>
-
-      <a href="ensino/estagio-internacional.html" class="card">
-        <h4>Estágio Internacional</h4>
-        <p>Programa para estudantes estrangeiros.</p>
-      </a>
-
-      <a href="ensino/estagio-sba.html" class="card">
-        <h4>CET GABS – SBA</h4>
-        <p>Centro oficial reconhecido.</p>
-      </a>
-
-      <a href="ensino/estagio-institucional.html" class="card">
-        <h4>Estágio Institucional</h4>
-        <p>Formação supervisionada.</p>
-      </a>
-
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="container">
-    <p>
-      <strong>GABS</strong><br>
-      Grupo de Anestesiologistas da Baixada Santista © 2026
-    </p>
-  </div>
-</footer>
+    document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+  });
+</script>
 
 </body>
 </html>
-

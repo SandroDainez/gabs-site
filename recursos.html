@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Biblioteca de materiais científicos, downloads e links úteis do GABS relacionados à anestesiologia e medicina perioperátória.">
+  <title>Recursos e Biblioteca | GABS Anestesiologia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="site-wrapper">
+  <div class="site-inner">
+
+    <nav class="nav-pill">
+      <div class="brand">
+        <div class="brand-icon">G</div>
+        <div class="brand-text">GABS</div>
+      </div>
+      <nav class="menu">
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="equipe.html">Equipe</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="ensino.html">Ensino</a>
+        <a href="eventos.html">Eventos</a>
+        <a href="faq.html">Dúvidas</a>
+        <a href="recursos.html" class="active">Recursos</a>
+      </nav>
+      <a href="contato.html" class="nav-cta">Contato</a>
+    </nav>
+
+    <section class="hero" style="min-height: auto; align-items: center; justify-content: center; padding-top: 100px; padding-bottom: 40px; text-align: center;">
+      <div class="hero-text" style="max-width: 800px; margin: 0 auto;">
+        <div class="hero-label" style="display:inline-flex; align-items: center; margin: 0 auto 32px;">
+          <span class="label-dot"></span> Material Científico
+        </div>
+        <h1 style="font-size: 64px; text-align: center;">
+          Recursos<br>e Biblioteca
+        </h1>
+        <p style="text-align: center; margin: 0 auto 40px; font-size: 20px;">
+          Materiais educativos, downloads e links úteis relacionados à anestesiologia produzidos e curados pelo GABS.
+        </p>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: DOWNLOADS -->
+    <section class="section-split" style="margin-top: 40px; padding-top: 48px;">
+      <div class="narrative-sticky">
+        <p style="font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: var(--color-cyan-500); text-transform: uppercase; margin-bottom: 16px;">Downloads</p>
+        <h2>Biblioteca para download</h2>
+        <p>Arquivos publicados para leitura, consulta e apoio ao visitante.</p>
+      </div>
+      <div class="cards-stack">
+        <div class="cards">
+          <div class="card card-featured-light card-featured-wide scroll-reveal">
+            <div class="service-icon">✦</div>
+            <h3>Nenhum download disponível</h3>
+            <p>Publique PDFs, ebooks ou materiais na biblioteca para que eles apareçam aqui.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: LINKS ÚTEIS -->
+    <section class="section-split" style="margin-top: 80px; padding-top: 48px; border-top: 1px solid var(--color-border);">
+      <div class="narrative-sticky">
+        <p style="font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: var(--color-cyan-500); text-transform: uppercase; margin-bottom: 16px;">Links Úteis</p>
+        <h2>Aplicativos gratuitos</h2>
+        <p>Sugestões de aplicativos gratuitos e links úteis relacionados à anestesiologia.</p>
+      </div>
+      <div class="cards-stack">
+        <div class="cards">
+          <div class="card scroll-reveal">
+            <div class="service-icon">✦</div>
+            <h3>Nenhum link cadastrado</h3>
+            <p>Cadastre links e aplicativos no administrativo para exibição pública.</p>
+          </div>
+          <div class="card scroll-reveal">
+            <div class="service-icon">✦</div>
+            <h3>SBA — Sociedade Brasileira</h3>
+            <p>Acesse o portal oficial com diretrizes, publicações e eventos da especialidade.</p>
+          </div>
+          <div class="card scroll-reveal">
+            <div class="service-icon">✦</div>
+            <h3>Perioperative Medicine</h3>
+            <p>Produção científica internacional de referência para a prática anestesiológica moderna.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <h2>Mantenha o Padrão Ouro.</h2>
+      <p>Grupo de Anestesiologistas da Baixada Santista © 2026. Segurança, Inovação e Qualidade Assistencial.</p>
+      <div class="footer-cta">
+        <a href="contato.html" class="btn-primary">Fale com a Administração</a>
+      </div>
+    </footer>
+
+  </div>
+</main>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else if (entry.boundingClientRect.top > 0) {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, { root: null, threshold: 0.1, rootMargin: "0px" });
+    document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+  });
+</script>
+
+</body>
+</html>

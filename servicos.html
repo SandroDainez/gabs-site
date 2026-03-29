@@ -3,86 +3,129 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Serviços | GABS</title>
+  <meta name="description" content="Serviços clínicos de alta complexidade do GABS: anestesia geral, regional, sedação, tratamento da dor e ensino médico supervisionado.">
+  <title>Serviços Clínicos | GABS Anestesiologia</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <header>
-    <div class="container topbar">
-      <div class="brand">
-        <img src="imagens/logo.png" alt="GABS" />
-        <div class="brand-text">
-          <h1>GABS</h1>
-          <span>Grupo de Anestesiologistas da Baixada Santista</span>
-        </div>
-      </div>
 
+<main class="site-wrapper">
+  <!-- START OF INNER FLOATING CARD -->
+  <div class="site-inner">
+
+    <!-- HEADER / NAV PILL -->
+    <nav class="nav-pill">
+      <div class="brand">
+        <div class="brand-icon">G</div>
+        <div class="brand-text">GABS</div>
+      </div>
       <nav class="menu">
         <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
         <a href="equipe.html">Equipe</a>
-        <a href="servicos.html">Serviços</a>
+        <a href="servicos.html" class="active">Serviços</a>
         <a href="ensino.html">Ensino</a>
         <a href="eventos.html">Eventos</a>
-        <a href="contato.html">Contato</a>
+        <a href="faq.html">Dúvidas</a>
+        <a href="recursos.html">Recursos</a>
       </nav>
-    </div>
-  </header>
+      <a href="contato.html" class="nav-cta">Contato</a>
+    </nav>
 
-  <section class="section">
-    <div class="container">
-      <h3>Nossos Serviços</h3>
+    <!-- MICRO-HERO -->
+    <section class="hero" style="min-height: auto; align-items: center; justify-content: center; padding-top: 100px; padding-bottom: 40px; text-align: center;">
+        <div class="hero-text text-center" style="max-width: 800px; margin: 0 auto;">
+            <div class="hero-label" style="display:inline-flex; align-items: center; margin: 0 auto 32px;">
+                <span class="label-dot"></span> Portfólio de Soluções
+            </div>
+            <h1 style="font-size: 64px; text-align: center;">
+                Serviços Clínicos<br>de Alta Complexidade
+            </h1>
+            <p style="text-align: center; margin: 0 auto 40px; font-size: 20px;">
+                Técnicas modernas, infraestrutura analgésica e monitoramento invasivo garantindo máximo conforto e previsibilidade do risco cirúrgico.
+            </p>
+        </div>
+    </section>
 
-      <div class="cards">
-        <a href="servicos/anestesia-geral.html" class="card service-card">
-          <div class="service-icon">🩺</div>
-          <h4>Anestesia Geral</h4>
-          <p>Assistência anestésica em procedimentos de média e alta complexidade.</p>
-        </a>
+    <!-- GRID BENTO DE SERVIÇOS -->
+    <section class="section" style="padding-top: 0; margin-top: 0;">
+      <div class="container" style="max-width: 100%; padding: 0;">
+        <div class="cards" style="margin-top: 32px;">
+        
+          <a href="servicos/anestesia-geral.html" class="card card-featured-light card-featured-wide scroll-reveal">
+            <div class="service-icon">✦</div>
+            <h3>Anestesia Geral</h3>
+            <p>Assistência anestésica rigorosa baseada em evidências para procedimentos de média e alta complexidade, preservando a homeostasia cirúrgica completa.</p>
+          </a>
 
-        <a href="servicos/anestesia-regional.html" class="card service-card">
-          <div class="service-icon">🧠</div>
-          <h4>Anestesia Regional</h4>
-          <p>Técnicas modernas guiadas por ultrassonografia.</p>
-        </a>
+          <a href="servicos/anestesia-regional.html" class="card scroll-reveal">
+            <div class="service-icon">✦</div>
+            <h3>Anestesia Regional</h3>
+            <p>Técnicas avançadas guiadas por ultrassonografia para bloqueios ultraprecisos.</p>
+          </a>
 
-        <a href="servicos/sedacao.html" class="card service-card">
-          <div class="service-icon">💉</div>
-          <h4>Sedação</h4>
-          <p>Conforto e segurança em procedimentos diagnósticos e terapêuticos.</p>
-        </a>
+          <a href="servicos/dor.html" class="card scroll-reveal">
+            <div class="service-icon">✦</div>
+            <h3>Tratamento da Dor</h3>
+            <p>Manejo multimodal intensivo da dor aguda e controle crônico.</p>
+          </a>
 
-        <a href="servicos/dor.html" class="card service-card">
-          <div class="service-icon">🩹</div>
-          <h4>Tratamento da Dor</h4>
-          <p>Manejo multimodal da dor aguda e crônica.</p>
-        </a>
+          <a href="servicos/sedacao.html" class="card card-featured-light card-featured-wide scroll-reveal">
+            <div class="service-icon">✦</div>
+            <h3>Sedação Confortável</h3>
+            <p>Conforto absoluto e segurança monitorada em procedimentos diagnósticos e terapêuticos rápidos focados na UX hospitalar do paciente.</p>
+          </a>
 
-        <!-- ✅ CORRIGIDO: este link é para a página ensino.html (na raiz), NÃO para servicos/ensino.html -->
-        <a href="ensino.html" class="card service-card">
-          <div class="service-icon">🎓</div>
-          <h4>Ensino e Treinamento</h4>
-          <p>Cursos, estágios e capacitações promovidos pelo GABS.</p>
-        </a>
+          <a href="ensino.html" class="card scroll-reveal">
+            <div class="service-icon">✦</div>
+            <h3>Ensino Monitorado</h3>
+            <p>Formação constante, estágios e capacitações imersivas promovidos pela rede.</p>
+          </a>
 
-        <!-- Placeholders (você disse que quer adicionar mais quadrados depois) -->
-        <a href="contato.html" class="card service-card">
-          <div class="service-icon">➕</div>
-          <h4>Outros Serviços (em breve)</h4>
-          <p>Novos temas e descrições serão adicionados.</p>
-        </a>
+          <a href="contato.html" class="card scroll-reveal">
+            <div class="service-icon">✦</div>
+            <h3>Integração Direta</h3>
+            <p>Linha de contato com nossa administração para integrações hospitalares seguras.</p>
+          </a>
+
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer>
-    <div class="container">
-      <p>
-        <strong>GABS</strong><br />
-        Grupo de Anestesiologistas da Baixada Santista © 2026
-      </p>
-    </div>
-  </footer>
+    <!-- FOOTER MODERNO DA REFERÊNCIA -->
+    <footer>
+        <h2>Mantenha o Padrão Ouro.</h2>
+        <p>Grupo de Anestesiologistas da Baixada Santista © 2026. Segurança, Inovação e Qualidade Assistencial.</p>
+        <div class="footer-cta">
+            <a href="contato.html" class="btn-primary">Fale com a Administração</a>
+        </div>
+    </footer>
+
+  <!-- END OF INNER FLOATING CARD -->
+  </div>
+</main>
+
+<script>
+  // Premium Infinite Scroll Observer (Fade & Reveal Engine Genérico)
+  document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else if (entry.boundingClientRect.top > 0) {
+          // Remove invisibilidade apenas se o card sair por baixo da tela
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, {
+      root: null,
+      threshold: 0.1,
+      rootMargin: "0px"
+    });
+
+    document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+  });
+</script>
+
 </body>
 </html>
-

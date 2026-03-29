@@ -2,8 +2,9 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Equipe – GABS Anestesiologia</title>
+  <title>Equipe | GABS Anestesiologia</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conheça o corpo clínico do GABS. Anestesiologistas altamente qualificados com formação sólida e experiência hospitalar na Baixada Santista.">
 
   <link rel="stylesheet" href="style.css">
 
@@ -23,45 +24,57 @@
 
 <body>
 
-<header>
-  <div class="container topbar">
+<main class="site-wrapper">
+  <!-- START OF INNER FLOATING CARD -->
+  <div class="site-inner">
 
-    <div class="brand">
-      <img src="imagens/logo.png" alt="GABS">
-      <div class="brand-text">
-        <h1>GABS</h1>
-        <span>Grupo de Anestesiologistas da Baixada Santista</span>
+    <!-- HEADER / NAV PILL -->
+    <nav class="nav-pill">
+      <div class="brand">
+        <div class="brand-icon">G</div>
+        <div class="brand-text">GABS</div>
       </div>
-    </div>
-
-    <nav class="menu">
-      <a href="index.html">Início</a>
-      <a href="equipe.html">Equipe</a>
-      <a href="servicos.html">Serviços</a>
-      <a href="ensino.html">Ensino</a>
-      <a href="eventos.html">Eventos</a>
-      <a href="contato.html">Contato</a>
+      <nav class="menu">
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="equipe.html" class="active">Equipe</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="ensino.html">Ensino</a>
+        <a href="eventos.html">Eventos</a>
+        <a href="faq.html">Dúvidas</a>
+        <a href="recursos.html">Recursos</a>
+      </nav>
+      <a href="contato.html" class="nav-cta">Contato</a>
     </nav>
 
-  </div>
-</header>
+    <!-- MICRO-HERO DA EQUIPE -->
+    <section class="hero" style="min-height: auto; align-items: center; justify-content: center; padding-top: 100px; padding-bottom: 40px; text-align: center;">
+        <div class="hero-text text-center" style="max-width: 800px; margin: 0 auto;">
+            <div class="hero-label" style="display:inline-flex; align-items: center; margin: 0 auto 32px;">
+                <span class="label-dot"></span> Membros do Corpo Clínico
+            </div>
+            <h1 style="font-size: 64px; text-align: center;">
+                Excelência<br>Humana e Científica
+            </h1>
+            <p style="text-align: center; margin: 0 auto 40px; font-size: 20px;">
+                Conheça os profissionais Ouro que garantem o rigor assistencial e a execução perfeita de cada procedimento em toda a nossa rede hospitalar parceira.
+            </p>
+        </div>
+    </section>
 
-<section class="section">
-  <div class="container">
-
-    <h2>Nossa Equipe</h2>
-
-    <div class="equipe">
+    <!-- GRID DOS MÉDICOS (Versão Premium Bento Box) -->
+    <section class="section" style="padding-top: 0; margin-top: 0;">
+      <div class="container" style="max-width: 100%; padding:0;">
+        <div class="equipe">
 
       <!-- ================= MEMBROS ================= -->
 
       <a href="medicos/dr-exemplo.html" class="membro">
         <img src="imagens/equipe_placeholder.jpg" alt="Dr. Nome">
-        <h3>Dr(a). Nome</h3>
+        <h3>Dr(a). Diretor Clínico</h3>
         <p>CRM: _____</p>
         <p>RQE: _____</p>
       </a>
-
       <a href="medicos/dr-exemplo.html" class="membro">
         <img src="imagens/equipe_placeholder.jpg" alt="Dr. Nome">
         <h3>Dr(a). Nome</h3>
@@ -122,53 +135,42 @@
 
     <!-- ================= PAGINAÇÃO ================= -->
 
-    <div class="pagination">
-      <button id="prevPage">← Anterior</button>
-      <span id="pageInfo">Página 1</span>
-      <button id="nextPage">Próxima →</button>
     </div>
 
+    <!-- FOOTER MODERNO DA REFERÊNCIA -->
+    <footer>
+        <h2>Mantenha o Padrão Ouro.</h2>
+        <p>Grupo de Anestesiologistas da Baixada Santista © 2026. Segurança, Inovação e Qualidade Assistencial.</p>
+        <div class="footer-cta">
+            <a href="contato.html" class="btn-primary">Fale com a Administração</a>
+        </div>
+    </footer>
+
+  <!-- END OF INNER FLOATING CARD -->
   </div>
-</section>
+</main>
 
 <script>
-  const membros = document.querySelectorAll('.membro');
-  const membrosPorPagina = 18;
-  let paginaAtual = 1;
-
-  const totalPaginas = Math.ceil(membros.length / membrosPorPagina);
-  const btnPrev = document.getElementById('prevPage');
-  const btnNext = document.getElementById('nextPage');
-  const infoPagina = document.getElementById('pageInfo');
-
-  function mostrarPagina(pagina) {
-    const inicio = (pagina - 1) * membrosPorPagina;
-    const fim = inicio + membrosPorPagina;
-
-    membros.forEach((membro, index) => {
-      membro.style.display = (index >= inicio && index < fim) ? 'block' : 'none';
+  // Premium Infinite Scroll Observer (Fade & Reveal Engine)
+  document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        // Quando entra na margem, fica visível, quando sai (subindo ou descendo), some.
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else if (entry.boundingClientRect.top > 0) {
+          // Previne bug de tremor no topo da tela verificando as bounds
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, {
+      root: null,
+      threshold: 0.1,
+      rootMargin: "0px" // Zero margins garantem que não haja saltos falsos na física de height no fim da janela
     });
 
-    infoPagina.textContent = `Página ${pagina} de ${totalPaginas}`;
-    btnPrev.disabled = pagina === 1;
-    btnNext.disabled = pagina === totalPaginas;
-  }
-
-  btnPrev.onclick = () => {
-    if (paginaAtual > 1) {
-      paginaAtual--;
-      mostrarPagina(paginaAtual);
-    }
-  };
-
-  btnNext.onclick = () => {
-    if (paginaAtual < totalPaginas) {
-      paginaAtual++;
-      mostrarPagina(paginaAtual);
-    }
-  };
-
-  mostrarPagina(paginaAtual);
+    document.querySelectorAll('.membro').forEach(card => observer.observe(card));
+  });
 </script>
 
 </body>

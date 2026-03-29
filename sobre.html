@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conheça o GABS — Grupo de Anestesiologistas da Baixada Santista. Missão, visão, valores e o compromisso com a excelência assistencial e formação médica.">
+  <title>Sobre o GABS | Anestesiologistas da Baixada Santista</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="site-wrapper">
+  <div class="site-inner">
+
+    <nav class="nav-pill">
+      <div class="brand">
+        <div class="brand-icon">G</div>
+        <div class="brand-text">GABS</div>
+      </div>
+      <nav class="menu">
+        <a href="index.html">Início</a>
+        <a href="sobre.html" class="active">Sobre</a>
+        <a href="equipe.html">Equipe</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="ensino.html">Ensino</a>
+        <a href="eventos.html">Eventos</a>
+        <a href="faq.html">Dúvidas</a>
+        <a href="recursos.html">Recursos</a>
+      </nav>
+      <a href="contato.html" class="nav-cta">Contato</a>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" style="min-height: auto; align-items: center; justify-content: center; padding-top: 100px; padding-bottom: 40px; text-align: center;">
+      <div class="hero-text" style="max-width: 800px; margin: 0 auto;">
+        <div class="hero-label" style="display:inline-flex; align-items: center; margin: 0 auto 32px;">
+          <span class="label-dot"></span> Quem Somos
+        </div>
+        <h1 style="font-size: 64px; text-align: center;">
+          O Grupo<br>GABS
+        </h1>
+        <p style="text-align: center; margin: 0 auto 40px; font-size: 20px;">
+          Somos um grupo de anestesiologistas com atuação assistencial em diversos hospitais da região, foco em segurança do paciente e compromisso permanente com formação e excelência médica.
+        </p>
+      </div>
+    </section>
+
+    <!-- MISSÃO + VALORES (Split) -->
+    <section class="section-split" style="margin-top: 40px; padding-top: 48px;">
+      <div class="narrative-sticky">
+        <h2>Nossa Missão e Valores</h2>
+        <p>Promover segurança cirúrgica de excelência, unindo ciência de ponta, humanização do cuidado e formação médica contínua da Baixada Santista.</p>
+        <a href="equipe.html" class="btn-primary" style="margin-top: 16px;">Conheça a Equipe</a>
+      </div>
+      <div class="cards-stack">
+        <div class="cards">
+
+          <div class="card card-featured-light card-featured-wide scroll-reveal">
+            <div class="service-icon">✦</div>
+            <h3>Segurança como Prioridade Absoluta</h3>
+            <p>Todos os nossos protocolos e decisões clínicas são orientados pela segurança máxima do paciente, seguindo rigorosas diretrizes nacionais e internacionais de anestesiologia perioperatória.</p>
+          </div>
+
+          <div class="card scroll-reveal">
+            <div class="service-icon">✦</div>
+            <h3>Missão</h3>
+            <p>Prover assistência anestésica de alta qualidade, com rigor técnico e humanização.</p>
+          </div>
+
+          <div class="card scroll-reveal">
+            <div class="service-icon">✦</div>
+            <h3>Visão</h3>
+            <p>Ser referência regional em excelência anestésica, ensino e inovação clínica.</p>
+          </div>
+
+          <div class="card card-featured-light card-featured-wide scroll-reveal">
+            <div class="service-icon">✦</div>
+            <h3>Compromisso com a Formação Médica</h3>
+            <p>O GABS acredita que a excelência assistencial nasce do investimento contínuo na educação médica. Por isso, mantemos programas de estágio, ensino supervisionado e atualização científica permanente para todos os membros e residentes.</p>
+          </div>
+
+          <div class="card scroll-reveal">
+            <div class="service-icon">✦</div>
+            <h3>Inovação Constante</h3>
+            <p>Adoção permanente de novas tecnologias e técnicas baseadas em evidências.</p>
+          </div>
+
+          <div class="card scroll-reveal">
+            <div class="service-icon">✦</div>
+            <h3>Ética e Transparência</h3>
+            <p>Atuação pautada em princípios éticos sólidos e transparência com pacientes e instituições.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- TIMELINE HISTÓRICA -->
+    <section class="section" style="margin-top: 80px; padding-top: 56px; border-top: 1px solid var(--color-border);">
+      <style>
+        .timeline-label {
+          font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+          color: var(--color-cyan-500); text-transform: uppercase; margin-bottom: 16px;
+        }
+        .timeline-title { font-family: var(--font-display); font-size: 40px; margin-bottom: 48px; }
+
+        /* Grid 2 colunas: [badge] [linha|conteúdo] */
+        .timeline {
+          display: flex;
+          flex-direction: column;
+          gap: 0;
+          max-width: 760px;
+        }
+
+        .timeline-item {
+          display: grid;
+          grid-template-columns: 100px 1fr;
+          gap: 0 24px;
+          align-items: start;
+          opacity: 0; transform: translateY(20px);
+          transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.16,1,0.3,1);
+        }
+        .timeline-item.visible { opacity: 1; transform: translateY(0); }
+
+        /* Coluna esquerda: badge de ano */
+        .tl-year {
+          padding-top: 4px;
+          text-align: right;
+        }
+        .tl-year span {
+          display: inline-block;
+          background: rgba(13,131,98,0.1);
+          color: var(--color-cyan-500);
+          font-size: 11px; font-weight: 700;
+          letter-spacing: 0.08em;
+          padding: 4px 10px;
+          border-radius: var(--radius-full);
+          white-space: nowrap;
+        }
+
+        /* Coluna direita: linha + conteúdo */
+        .tl-content {
+          position: relative;
+          padding-left: 28px;
+          padding-bottom: 40px;
+        }
+        /* Linha vertical contínua */
+        .tl-content::before {
+          content: "";
+          position: absolute; left: 0; top: 6px; bottom: 0;
+          width: 2px;
+          background: linear-gradient(to bottom, rgba(13,131,98,0.4), rgba(13,131,98,0.05));
+        }
+        /* Ponto na linha */
+        .tl-content::after {
+          content: "";
+          position: absolute; left: -4px; top: 4px;
+          width: 10px; height: 10px; border-radius: 50%;
+          background: var(--color-cyan-500);
+          box-shadow: 0 0 0 3px rgba(13,131,98,0.15);
+        }
+        /* Sem linha no último item */
+        .timeline-item:last-child .tl-content::before { display: none; }
+        .timeline-item:last-child .tl-content { padding-bottom: 0; }
+
+        .tl-content h4 {
+          font-family: var(--font-display); font-size: 20px;
+          color: var(--color-stone-900); margin-bottom: 8px;
+          line-height: 1.2;
+        }
+        .tl-content p {
+          font-size: 15px; color: var(--color-stone-600); line-height: 1.6;
+        }
+      </style>
+
+      <p class="timeline-label">Nossa Trajetória</p>
+      <h2 class="timeline-title">Uma história de<br>comprometimento</h2>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="tl-year"><span>Fundação</span></div>
+          <div class="tl-content">
+            <h4>Criação do GABS</h4>
+            <p>Grupo fundado por anestesiologistas com visão de construir uma referência regional em segurança cirúrgica e cuidado perioperatório na Baixada Santista.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="tl-year"><span>Expansão</span></div>
+          <div class="tl-content">
+            <h4>Expansão para múltiplos hospitais</h4>
+            <p>O grupo amplia sua atuação para cobrir os principais centros cirúrgicos da região, consolidando sua presença assistencial e sua equipe multidisciplinar.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="tl-year"><span>CET / SBA</span></div>
+          <div class="tl-content">
+            <h4>Reconhecimento oficial como CET GABS – SBA</h4>
+            <p>O Centro de Ensino e Treinamento do GABS é credenciado pela Sociedade Brasileira de Anestesiologia, marcando a consolidação do programa de ensino.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="tl-year"><span>Internacional</span></div>
+          <div class="tl-content">
+            <h4>Programa de estágio internacional</h4>
+            <p>Início do programa de integração acadêmica voltado a médicos estrangeiros, ampliando o impacto educacional do GABS além das fronteiras nacionais.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="tl-year"><span>2026</span></div>
+          <div class="tl-content">
+            <h4>Presente: Padrão Ouro</h4>
+            <p>Com décadas de excelência e um corpo clínico de alto nível, seguimos comprometidos com a inovação, a segurança e o futuro da anestesiologia nacional.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <footer>
+      <h2>Mantenha o Padrão Ouro.</h2>
+      <p>Grupo de Anestesiologistas da Baixada Santista © 2026. Segurança, Inovação e Qualidade Assistencial.</p>
+      <div class="footer-cta">
+        <a href="contato.html" class="btn-primary">Fale com a Administração</a>
+      </div>
+    </footer>
+
+
+  </div>
+</main>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else if (entry.boundingClientRect.top > 0) {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, { root: null, threshold: 0.1, rootMargin: "0px" });
+    document.querySelectorAll('.scroll-reveal, .timeline-item').forEach(el => observer.observe(el));
+
+  });
+</script>
+
+</body>
+</html>
