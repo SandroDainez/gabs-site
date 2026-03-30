@@ -7,13 +7,14 @@
 
 :root {
   /* Exact Colors from References */
-  --color-outer-body: #11362e; /* Teal/Forest escuro para o background externo */
-  --color-inner-body: #F4F9F6; /* Green 50 (fundo do cartão principal) */
-  --color-stone-900: #0F2A1E; /* Verde denso do texto */
-  --color-stone-600: #4B6357; /* Textos secundários */
-  --color-cyan-500: #0d8362; /* Botões de ação (esmeralda médico) */
-  --color-cyan-600: #0a6950; /* Hover dos botões */
-  --color-border: rgba(15, 42, 30, 0.1); 
+  /* Exact Colors from Logo Integration */
+  --color-outer-body: #10142D; /* Azul Marinho Profundo (Extraído do arco do logo) */
+  --color-inner-body: #F9FBFC; /* Off-white azulado para o card principal */
+  --color-stone-900: #1A2140; /* Azul Escuro denso para texto titulos */
+  --color-stone-600: #58698C; /* Cinza azulado para secundários */
+  --color-cyan-500: #5EB9AE; /* Ciano do Logo (Letra G) */
+  --color-cyan-600: #4AA89D; /* Hover do Ciano */
+  --color-border: rgba(26, 33, 64, 0.08); 
 
   /* Exact Shadows from "Nova - Product Growth" */
   --shadow-massive: 
@@ -54,10 +55,10 @@ body {
   padding: 0;
   margin: 0;
   
-  /* Efeito Premium de Engenharia (Blueprint Grid Escuro Animado) */
+  /* Efeito Premium de Engenharia (Blueprint Grid Marinho Animado) */
   background-image: 
-    linear-gradient(rgba(17, 54, 46, 0.95), rgba(17, 54, 46, 0.95)), 
-    repeating-linear-gradient(rgba(255,255,255,0.02) 0, rgba(255,255,255,0.02) 1px, transparent 1px, transparent 64px), 
+    linear-gradient(rgba(16, 20, 45, 0.96), rgba(16, 20, 45, 0.96)), 
+    repeating-linear-gradient(rgba(94,185,174,0.03) 0, rgba(94,185,174,0.03) 1px, transparent 1px, transparent 64px), 
     repeating-linear-gradient(90deg, rgba(255,255,255,0.02) 0, rgba(255,255,255,0.02) 1px, transparent 1px, transparent 64px);
   background-attachment: fixed;
   background-position: center;
@@ -149,24 +150,27 @@ a { color: inherit; text-decoration: none; transition: var(--transition-fast); }
 }
 @media (min-width: 640px) { .nav-pill { padding: 12px 24px; } }
 
+/* CABEÇALHO (LOGO + MENU) */
 .brand {
   display: flex;
   align-items: center;
   gap: 12px;
+  text-decoration: none;
 }
-.brand-icon {
-  width: 40px; height: 40px;
-  border-radius: 50%;
-  background-color: var(--color-stone-900);
-  color: white;
-  display: flex; align-items: center; justify-content: center;
-  font-weight: bold; font-family: var(--font-display);
+.brand img {
+  height: 44px; /* Aumentei um pouco para valorizar a marca */
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
 .brand-text {
   font-family: var(--font-sans);
-  font-weight: 600;
-  font-size: 16px;
-  letter-spacing: -0.01em;
+  font-weight: 700;
+  font-size: 13px; /* Pequeno e discreto */
+  color: var(--color-stone-900);
+  text-transform: uppercase;
+  letter-spacing: 0.15em; /* Espaçamento de luxo */
+  opacity: 0.8; /* Sutilidade */
 }
 
 nav.menu {
